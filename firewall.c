@@ -84,16 +84,7 @@ system("service iptables start");
 
 kurallarisil(){
   system("service iptables stop");
-system("iptables -A INPUT -p icmp -i eth0 -j DROP");
-system("iptables -D INPUT -p udp -m string --string zzzz --Dlgo kmp --to 65535 -j DROP");
-system("iptables -D INPUT -p tcp --dport 80 -m limit --limit 25/minute --limit-burst 100 -j ACCEPT");
-system("iptables -D INPUT -p icmp -j DROP");
-system("iptables -D INPUT -p udp --dport 9987 -m state --state NEW,ESTABLISHED -j ACCEPT");
-system("iptables -D OUTPUT -p udp --sport 9987 -m state --state ESTABLISHED -j ACCEPT");
-system("iptables -D INPUT -p tcp --dport 2008 -m state --state NEW,ESTABLISHED -j ACCEPT");
-system("iptables -D OUTPUT -p tcp --sport 2008 -m state --state ESTABLISHED -j ACCEPT");
-system("iptables -D INPUT -p tcp --dport 30033 -m state --state NEW,ESTABLISHED -j ACCEPT");
-system("iptables -D OUTPUT -p tcp --sport 30033 -m state --state ESTABLISHED -j ACCEPT");
+system("iptables -F");
 system("service iptables save");
 system("service iptables start");
 }
