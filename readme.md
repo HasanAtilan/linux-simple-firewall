@@ -2,7 +2,7 @@
 
 > -Simple Firewall Rules <br/>
 > written entirely as a test <br/>
-> You can enter your own rules by examining <br/>
+> You can enter your own rules by examining <br/><br/>
 > tamamen Test Olarak Yazıldı <br/>
 > İnceleyerek Kendi Kurallarınızı girebilirsiniz <br/>
 > https://stresser.me <br/> 
